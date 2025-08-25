@@ -214,6 +214,11 @@ h6,
     border-radius: 3.5rem;
 }
 
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
 @media (max-width: 768px) {
     #header-carousel .carousel-item {
         position: relative;
