@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FF5E14;
+    --primary: #a2ce3d;
     --secondary: #5F656F;
     --light: #F5F5F5;
     --dark: #02245B;
@@ -104,7 +104,7 @@ h6,
     top: 0;
     left: -15px;
     transform: skewX(-30deg);
-    background-color: var(--primary);
+    background-color: #1b5a2d;
 }
 
 
@@ -120,7 +120,7 @@ h6,
     height: 75px;
     display: flex;
     align-items: center;
-    background: var(--primary);
+    background: #39b54a;
 }
 
 .navbar .navbar-brand::after {
@@ -131,7 +131,7 @@ h6,
     top: 0;
     right: -25px;
     transform: skewX(-30deg);
-    background-color: var(--primary);
+    background-color: #1b5a2d;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -145,7 +145,7 @@ h6,
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #1b5a2d;
 }
 
 .navbar .dropdown-toggle::after {
@@ -229,7 +229,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/carousel-2.jpg) center center no-repeat;
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/all.jpg) center center no-repeat;
     background-size: cover;
 }
 
