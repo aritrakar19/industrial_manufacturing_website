@@ -114,7 +114,7 @@
                 href="./products/FOOD-AND-BEVERAGE-INDUSTRY.html"
                 class="dropdown-item"
                 style="text-decoration: underline"
-                >FOOD AND BEVERAGE INDUSTRY</a
+                >FOOD  INDUSTRY</a
               >
               <a
                 href="./products/BEVERAGE-INDUSTRY.html"
@@ -808,8 +808,89 @@
     </div>
     <!-- Project End -->
 
+
+<style>
+  .achievements-section {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  .achievements-section p {
+    color: #1b5a2d;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .achievements-section h1 {
+    margin-bottom: 40px;
+  }
+
+  .slider-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider-track {
+    display: flex;
+    animation: scroll 9s linear infinite; ;
+  }
+
+  .slider-track .slide {
+    flex: 0 0 auto;
+    width: 250px; /* adjustable */
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .slider-track .slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+</style>
+
+<div class="achievements-section">
+  <p>Our Achievements</p>
+  <h1>Proud Moments We Have Achieved</h1>
+
+  <div class="slider-container">
+    <div class="slider-track">
+      <!-- Repeat images for continuous effect -->
+      <div class="slide"><img src="/img/proud1.jpeg" /></div>
+      <div class="slide"><img src="/img/proud2.jpeg" /></div>
+      <div class="slide"><img src="/img/proud3.jpeg" /></div>
+      <div class="slide"><img src="/img/proud4.jpeg" /></div>
+      <div class="slide"><img src="/img/proud5.jpeg" /></div>
+      <div class="slide"><img src="/img/proud6.jpeg" /></div>
+      <div class="slide"><img src="/img/proud1.jpeg" /></div>
+      <div class="slide"><img src="/img/proud2.jpeg" /></div>
+      <div class="slide"><img src="/img/proud3.jpeg" /></div>
+      <div class="slide"><img src="/img/proud4.jpeg" /></div>
+      <div class="slide"><img src="/img/proud5.jpeg" /></div>
+      <div class="slide"><img src="/img/proud6.jpeg" /></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
       <div class="container">
         <div
           class="text-center mx-auto wow fadeInUp"
@@ -933,7 +1014,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
     <!-- Testimonial Start -->
@@ -1066,19 +1147,24 @@
               <i class="fa fa-envelope me-3"></i>info@example.com
             </p>
             <div class="d-flex pt-3">
-              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-square btn-primary rounded-circle me-2" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
+  <a class="btn btn-square rounded-circle me-2" href=""
+     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a class="btn btn-square rounded-circle me-2" href=""
+     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a class="btn btn-square rounded-circle me-2" href=""
+     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a class="btn btn-square rounded-circle me-2" href=""
+     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+
           </div>
           <div class="col-lg-3 col-md-6">
             <h5 class="text-white mb-4">Business Hours</h5>
@@ -1099,11 +1185,13 @@
                 placeholder="Your email"
               />
               <button
-                type="button"
-                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-              >
-                SignUp
-              </button>
+  type="button"
+  class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
+  style="background-color: #0E7945; border-color: #0E7945; color: #fff;"
+>
+  SignUp
+</button>
+
             </div>
           </div>
         </div>
@@ -1124,10 +1212,11 @@
 
     <!-- Back to Top -->
     <a
-      href="#"
-      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+  href="#"
+  class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+>
+  <i class="bi bi-arrow-up"></i>
+</a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
