@@ -481,13 +481,21 @@ h6,
 }
 
 .project-item {
-    position: relative;
-    display: block;
+  display: block;
+  background: #fff;         
+  border-radius: 8px;     
+  overflow: hidden;        
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* shadow effect */
+  margin: 10px;            
 }
 
 .project-item img {
-    transition: .5s;
+  width: 100%;
+  height: 300px;   
+  object-fit: cover; 
+  display: block;
 }
+
 
 .project-item:hover img,
 .project-carousel .owl-item.center img {
@@ -709,3 +717,5 @@ h6,
   background-color: #39B54A !important;
   color: #fff !important; /* text color white for contrast */
 }
+
+
