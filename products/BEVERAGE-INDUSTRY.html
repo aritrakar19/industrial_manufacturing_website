@@ -114,7 +114,7 @@
                 href="./FOOD-AND-BEVERAGE-INDUSTRY.html"
                 class="dropdown-item"
                 style="text-decoration: underline"
-                >FOOD  INDUSTRY</a
+                >FOOD INDUSTRY</a
               >
               <a
                 href="./BEVERAGE-INDUSTRY.html"
@@ -169,173 +169,181 @@
       </div>
     </div>
     <!-- Page Header End -->
-   <div class="product-section">
-  <!-- Product Card 1 -->
-  <div class="product-card">
-    <img src="/img/food1.jpg" alt="Juice and Soda Machine" />
-    <div class="product-content">
-      <h3>Juice and Soda Machine</h3>
-      <p>
-        High-capacity juice and soda machine designed for maximum efficiency
-        and durability. Ensures superior beverage quality with advanced
-        technology. Ideal for commercial beverage production and
-        industrial-scale operations.
-      </p>
+    <div class="product-section">
+      <!-- Product Card 1 -->
+       <div class="product-card">
+        <img src="/img/download 22(1).jpg" alt="Product 3" />
+        <div class="product-content">
+          <h3>Alcohol Machine</h3>
+          <p>
+            Premium alcohol production machine designed for consistent quality,
+            safety, and efficiency. Ensures smooth fermentation, distillation,
+            and bottling processes, delivering reliable and hygienic output
+            suitable for both small-scale craft distilleries and large-scale
+            commercial alcohol production.
+          </p>
+        </div>
+      </div>
+      
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="/img/food1.jpg" alt="Juice and Soda Machine" />
+        <div class="product-content">
+          <h3>Fermentation System</h3>
+          <p>
+            High-capacity juice and soda machine designed for maximum efficiency
+            and durability. Ensures superior beverage quality with advanced
+            technology. Ideal for commercial beverage production and
+            industrial-scale operations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="/img/Food3.jpg" alt="Product 3" />
+        <div class="product-content">
+          <h3>Distillery Equipment</h3>
+          <p>
+            Water and fruit juice machines available in 30, 40, 60, 90, 120, and
+            150 BPM. Engineered for high efficiency, reliable performance, and
+            consistent quality, suitable for both small-scale and industrial
+            beverage production operations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="/img/alcohol.jpg" alt="Dairy Food Machine" />
+        <div class="product-content">
+          <h3>Beverage Production System</h3>
+          <p>
+            High-performance alcohol production machines available in 500, 1000,
+            2000, 5000, and 10,000 liter/hr capacities. Designed for efficiency,
+            safety, and consistent output, ensuring precise fermentation,
+            distillation, and bottling for commercial and industrial alcohol
+            production.
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 5 -->
+      <div class="product-card">
+        <img src="/img/download.jpg" alt="Product 3" />
+        <div class="product-content">
+          <h3>Brewing Equipment</h3>
+          <p>
+            Advanced alcohol production machines designed for continuous
+            commercial operation. Built for efficiency, safety, and hygiene,
+            these machines ensure consistent fermentation, distillation, and
+            bottling, supporting both small-scale craft and large-scale
+            industrial alcohol production.
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="product-card">
+        <img src="/img/food2.jpg" alt="Juice and Soda Machine" />
+        <div class="product-content">
+          <h3>Juice and Soda Machine</h3>
+          <p>
+            High-performance water and fruit juice machines available in 30, 40,
+            60, 90, 120, and 150 BPM. Designed for efficiency, hygiene, and
+            consistent output, ensuring reliable production for small to
+            large-scale beverage processing industries.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Product Card 2 -->
-  <div class="product-card">
-    <img src="/img/food2.jpg" alt="Juice and Soda Machine" />
-    <div class="product-content">
-      <h3>Juice and Soda Machine</h3>
-      <p>
-        High-performance water and fruit juice machines available in 30, 40, 60, 90, 120, and 150 BPM. Designed for efficiency, hygiene, and consistent output, ensuring reliable production for small to large-scale beverage processing industries.
-      </p>
-    </div>
-  </div>
+    <style>
+      /* Container */
+      .product-section {
+        max-width: 1200px;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        padding: 0 20px;
+      }
 
-  <!-- Product Card 3 -->
-  <div class="product-card">
-    <img src="/img/Food3.jpg" alt="Product 3" />
-    <div class="product-content">
-      <h3>Product 3</h3>
-      <p>
-        Water and fruit juice machines available in 30, 40, 60, 90, 120, and 150 BPM. Engineered for high efficiency, reliable performance, and consistent quality, suitable for both small-scale and industrial beverage production operations.
-      </p>
-    </div>
-  </div>
+      /* Card Styles - Food Page Look */
+      .product-card {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 280px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(40px);
+      }
 
-  <!-- Product Card 4 -->
-  <div class="product-card">
-    <img src="/img/dairy2.jpg" alt="Dairy Food Machine" />
-    <div class="product-content">
-      <h3>Dairy Food Machine</h3>
-      <p>
-        Versatile dairy food processing machine available in 500, 1000,
-        2000, 5000, and 10,000 lit/hr capacities. Hygienic design,
-        energy-efficient operation, and reliable output ensure consistent
-        pasteurization, homogenization, and cooling performance for dairies
-        scaling production with minimal downtime.
-      </p>
-    </div>
-  </div>
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      }
 
-  <!-- Product Card 5 -->
-  <div class="product-card">
-    <img src="/img/dairy3.jpg" alt="Product 3" />
-    <div class="product-content">
-      <h3>Product 3</h3>
-      <p>
-        High-performance dairy food machine with multiple capacities: 500,
-        1000, 2000, 5000, and 10,000 lit/hr. Designed for efficiency,
-        hygiene, and durability. Ideal for milk processing, pasteurization,
-        and production scaling with consistent quality and reduced
-        operational costs.
-      </p>
-    </div>
-  </div>
+      .product-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
+        transition: transform 0.3s ease;
+      }
 
-  <!-- Product Card 6 -->
-  <div class="product-card">
-    <img src="/img/food1.jpg" alt="Product 3" />
-    <div class="product-content">
-      <h3>Product 3</h3>
-      <p>
-        Made with fresh ingredients and guaranteed high quality, this dairy
-        food machine ensures consistent taste, hygiene, and durability.
-        Perfect for milk processing and food production, delivering
-        delicious results with efficiency, safety, and reliable performance
-        every hour.
-      </p>
-    </div>
-  </div>
-</div>
+      .product-card:hover img {
+        transform: scale(1.05);
+      }
 
-<style>
-/* Container */
-.product-section {
-  max-width: 1200px;
-  margin: 50px auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  padding: 0 20px;
-}
+      /* Content */
+      .product-content {
+        padding: 18px;
+      }
 
-/* Card Styles - Food Page Look */
-.product-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 280px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(40px);
-}
+      .product-content h3 {
+        margin: 0 0 8px 0;
+        font-size: 1.3rem;
+        color: #333;
+        font-weight: 600;
+      }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
+      .product-content p {
+        margin: 0;
+        font-size: 0.94rem;
+        color: #666;
+        line-height: 1.5;
+      }
 
-.product-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
-  transition: transform 0.3s ease;
-}
+      /* Fade-in Animation */
+      .product-card.animate {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+    </style>
 
-.product-card:hover img {
-  transform: scale(1.05);
-}
+    <script>
+      const cards = document.querySelectorAll(".product-card");
 
-/* Content */
-.product-content {
-  padding: 18px;
-}
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
 
-.product-content h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.3rem;
-  color: #333;
-  font-weight: 600;
-}
-
-.product-content p {
-  margin: 0;
-  font-size: 0.94rem;
-  color: #666;
-  line-height: 1.5;
-}
-
-/* Fade-in Animation */
-.product-card.animate {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-</style>
-
-<script>
-const cards = document.querySelectorAll(".product-card");
-
-const observer = new IntersectionObserver((entries, obs) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate");
-      obs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
-
-cards.forEach(card => observer.observe(card));
-</script>
-
-
+      cards.forEach((card) => observer.observe(card));
+    </script>
 
     <!-- Footer Start -->
     <div
@@ -373,24 +381,51 @@ cards.forEach(card => observer.observe(card));
               <i class="fa fa-envelope me-3"></i>info@example.com
             </p>
             <div class="d-flex pt-3">
-  <a class="btn btn-square rounded-circle me-2" href=""
-     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
-    <i class="fab fa-twitter"></i>
-  </a>
-  <a class="btn btn-square rounded-circle me-2" href=""
-     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a class="btn btn-square rounded-circle me-2" href=""
-     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a class="btn btn-square rounded-circle me-2" href=""
-     style="background-color: #0E7945; border-color: #0E7945; color: #fff;">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-</div>
-
+              <a
+                class="btn btn-square rounded-circle me-2"
+                href=""
+                style="
+                  background-color: #0e7945;
+                  border-color: #0e7945;
+                  color: #fff;
+                "
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                class="btn btn-square rounded-circle me-2"
+                href=""
+                style="
+                  background-color: #0e7945;
+                  border-color: #0e7945;
+                  color: #fff;
+                "
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="btn btn-square rounded-circle me-2"
+                href=""
+                style="
+                  background-color: #0e7945;
+                  border-color: #0e7945;
+                  color: #fff;
+                "
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                class="btn btn-square rounded-circle me-2"
+                href=""
+                style="
+                  background-color: #0e7945;
+                  border-color: #0e7945;
+                  color: #fff;
+                "
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <h5 class="text-white mb-4">Business Hours</h5>
@@ -411,13 +446,16 @@ cards.forEach(card => observer.observe(card));
                 placeholder="Your email"
               />
               <button
-  type="button"
-  class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
-  style="background-color: #0E7945; border-color: #0E7945; color: #fff;"
->
-  SignUp
-</button>
-
+                type="button"
+                class="btn py-2 position-absolute top-0 end-0 mt-2 me-2"
+                style="
+                  background-color: #0e7945;
+                  border-color: #0e7945;
+                  color: #fff;
+                "
+              >
+                SignUp
+              </button>
             </div>
           </div>
         </div>
@@ -426,27 +464,33 @@ cards.forEach(card => observer.observe(card));
     <!-- Footer End -->
 
     <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4" style="background-color: #39B54A;">
-  <div class="container text-center">
-    <p class="mb-2" style="color: #ffffff; font-weight: bold;">
-  Copyright &copy; 
-  <a class="fw-semi-bold" href="#" style="color: #1B5A2D; font-style: italic;">
-    Your Site Name
-  </a>, 
-  All Right Reserved.
-</p>
-  </div>
-</div>
+    <div
+      class="container-fluid copyright py-4"
+      style="background-color: #39b54a"
+    >
+      <div class="container text-center">
+        <p class="mb-2" style="color: #ffffff; font-weight: bold">
+          Copyright &copy;
+          <a
+            class="fw-semi-bold"
+            href="#"
+            style="color: #1b5a2d; font-style: italic"
+          >
+            Your Site Name </a
+          >, All Right Reserved.
+        </p>
+      </div>
+    </div>
     <!-- Copyright End -->
 
     <!-- Back to Top -->
     <a
-  href="#"
-  class="btn btn-lg  btn-primary btn-lg-square rounded-circle back-to-top"
-  style="background-color: #0e7945; border: none;"
->
-  <i class="bi bi-arrow-up"></i>
-</a>
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      style="background-color: #0e7945; border: none"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
