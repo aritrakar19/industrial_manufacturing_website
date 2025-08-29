@@ -89,6 +89,17 @@
           style="height: 140px"
         />
       </a>
+      <style>
+/* Ensure the navbar toggler is at top-right on mobile */
+@media (max-width: 991px) { /* Bootstrap lg breakpoint */
+  .navbar-toggler {
+    position: absolute;
+    top: 15px;   /* distance from top */
+    right: 20px; /* distance from right */
+    z-index: 1050; /* above navbar content */
+  }
+}
+</style>
       <button
         type="button"
         class="navbar-toggler me-0"
