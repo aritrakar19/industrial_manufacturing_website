@@ -297,63 +297,87 @@
             </div>
           </div>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <form>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                    />
-                    <label for="name">Your Name</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Your Email"
-                    />
-                    <label for="email">Your Email</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="subject"
-                      placeholder="Subject"
-                    />
-                    <label for="subject">Subject</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <textarea
-                      class="form-control"
-                      placeholder="Leave a message here"
-                      id="message"
-                      style="height: 150px"
-                    ></textarea>
-                    <label for="message">Message</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button
-                    class="btn py-3 px-5"
-                    type="submit"
-                    style="background-color: #0e7945; color: #fff"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
+            <form id="whatsappForm">
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Your Name"
+          required
+        />
+        <label for="name">Your Name</label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Your Email"
+          required
+        />
+        <label for="email">Your Email</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="subject"
+          placeholder="Subject"
+          required
+        />
+        <label for="subject">Subject</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a message here"
+          id="message"
+          style="height: 150px"
+          required
+        ></textarea>
+        <label for="message">Message</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button
+        class="btn py-3 px-5"
+        type="submit"
+        style="background-color: #0e7945; color: #fff"
+      >
+        Send Message
+      </button>
+    </div>
+  </div>
+</form>
+
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // form reload হওয়া বন্ধ করবে
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappNumber = "918980037315";
+
+    let text = `*New Enquiry*\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+
+    let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank"); // নতুন ট্যাবে WhatsApp খুলবে
+  });
+</script>
+
           </div>
         </div>
       </div>
@@ -361,7 +385,7 @@
     <!-- Contact End -->
 
     <!-- Footer Start -->
-    <div
+     <div
       class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn"
       data-wow-delay="0.1s"
     >
@@ -398,18 +422,7 @@
             <div class="d-flex pt-3">
               <a
                 class="btn btn-square rounded-circle me-2"
-                href=""
-                style="
-                  background-color: #0e7945;
-                  border-color: #0e7945;
-                  color: #fff;
-                "
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                class="btn btn-square rounded-circle me-2"
-                href=""
+                href="https://www.facebook.com/share/1A4Nxj3sBf/"
                 style="
                   background-color: #0e7945;
                   border-color: #0e7945;
@@ -420,7 +433,8 @@
               </a>
               <a
                 class="btn btn-square rounded-circle me-2"
-                href=""
+                href="https://youtube.com/@swarnabhaindustries2019?si=tT5T-e4jizUeBxU5"
+                target="_blank"
                 style="
                   background-color: #0e7945;
                   border-color: #0e7945;
@@ -428,17 +442,6 @@
                 "
               >
                 <i class="fab fa-youtube"></i>
-              </a>
-              <a
-                class="btn btn-square rounded-circle me-2"
-                href=""
-                style="
-                  background-color: #0e7945;
-                  border-color: #0e7945;
-                  color: #fff;
-                "
-              >
-                <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
           </div>
