@@ -115,6 +115,44 @@
         }
     });
 
+    // Mobile dropdown menu toggle
+    $(document).on('click', '.dropdown-item.main-item', function(e) {
+        if ($(window).width() < 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            var $group = $(this).closest('.dropdown-item-group');
+            $group.toggleClass('active');
+            $group.siblings('.dropdown-item-group').removeClass('active');
+        }
+    });
+
+    // Prevent dropdown from closing when clicking inside
+    $(document).on('click', '.mega-menu', function(e) {
+        e.stopPropagation();
+    });
+
+    // Handle Products dropdown toggle
+    $('.nav-item.dropdown .dropdown-toggle').on('click', function(e) {
+        if ($(window).width() < 992) {
+            e.preventDefault();
+            var $dropdown = $(this).closest('.nav-item.dropdown');
+            var $menu = $dropdown.find('.mega-menu');
+            
+            // Close other dropdowns
+            $('.nav-item.dropdown').not($dropdown).find('.mega-menu').removeClass('show');
+            
+            // Toggle current dropdown
+            $menu.toggleClass('show');
+        }
+    });
+
+    // Close dropdown when clicking outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.nav-item.dropdown').length) {
+            $('.mega-menu').removeClass('show');
+        }
+    });
+
     
 })(jQuery);
 
