@@ -66,10 +66,10 @@
               <i class="fa fa-phone-alt me-2"></i>Call Us:
             </span>
             <a
-              href="tel:+916290523927"
+              href="tel:+919804334020"
               class="fs-5 fw-bold text-white text-decoration-none"
             >
-              +91 6290523927
+              +91 9804334020
             </a>
           </div>
         </div>
@@ -83,10 +83,10 @@
     >
       <a href="index.html" class="navbar-brand ps-5 me-0">
         <img
-          src="img/swarnabhalogo.jpeg"
+          src="img/swarnabha_logo.png"
           alt="Industro Logo"
           class="img-fluid"
-          style="height: 75px"
+          style="height: 100px"
         />
       </a>
       <button
@@ -137,12 +137,12 @@
                 <i class="fa fa-phone-alt fa-2x" style="color: #0e7945"></i>
               </div>
               <h4 class="mb-3">Phone Number</h4>
-              <p class="mb-2">+91 6290523927</p>
+              <p class="mb-2">+91 9804334020</p>
               <p class="mb-4">+91 7980037315</p>
               <a
                 class="btn px-4"
                 style="background-color: #0e7945; color: #fff"
-                href="tel:+916290523927"
+                href="tel:+919804334020"
                 >Call Now <i class="fa fa-arrow-right ms-2"></i
               ></a>
             </div>
@@ -258,89 +258,340 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <form id="whatsappForm">
-  <div class="row g-3">
-    <div class="col-md-6">
-      <div class="form-floating">
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          placeholder="Your Name"
-          required
-        />
-        <label for="name">Your Name</label>
+          <style>
+  /* Force white background for dropdown */
+  select.form-control {
+    background-color: #ffffff !important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+  }
+
+  /* Dropdown arrow */
+  .select-wrapper {
+    position: relative;
+  }
+
+  .select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #555;
+  }
+</style>
+
+<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+  <form id="whatsappForm">
+    <div class="row g-3">
+
+      <!-- Name -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="name" placeholder="Name" required />
+          <label for="name">Name</label>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-floating">
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          placeholder="Your Email"
-          required
-        />
-        <label for="email">Your Email</label>
+
+      <!-- Phone -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required />
+          <label for="phone">Phone Number</label>
+        </div>
       </div>
-    </div>
-    <div class="col-12">
-      <div class="form-floating">
-        <input
-          type="text"
-          class="form-control"
-          id="subject"
-          placeholder="Subject"
-          required
-        />
-        <label for="subject">Subject</label>
+
+      <!-- Email -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="email" class="form-control" id="email" placeholder="Email ID" required />
+          <label for="email">Email ID</label>
+        </div>
       </div>
-    </div>
-    <div class="col-12">
-      <div class="form-floating">
-        <textarea
-          class="form-control"
-          placeholder="Leave a message here"
-          id="message"
-          style="height: 150px"
-          required
-        ></textarea>
-        <label for="message">Message</label>
+
+      <!-- Date -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="date" class="form-control" id="date" required />
+          <label for="date">Date</label>
+        </div>
       </div>
+
+      <!-- Machine Dropdown -->
+      <div class="col-12">
+        <div class="form-floating select-wrapper">
+          <select class="form-control" id="machine" required>
+            <option value="">Select Machine / Product</option>
+
+            <option>Water Plant Machine</option>
+            <option>Fruit Juice and Soda Plant Machine</option>
+            <option>Ice Cream Plant Machine</option>
+            <option>Dairy Plant Machine</option>
+            <option>Brewery Plant Machine</option>
+            <option>Alcohol Plant Machine</option>
+            <option>Rice Mill Machine</option>
+            <option>Cold Storage Machine</option>
+
+            <option>Vertical Injection Molding Machine</option>
+            <option>Horizontal Injection Molding Machine</option>
+            <option>Pet Series Injection Molding Machine</option>
+
+            <option>Semi Auto Blow Molding Machine</option>
+            <option>Full Auto Blow Molding Machine</option>
+            <option>HDPE Blow Molding Machine</option>
+
+            <option>Manual Fly-Ash Brick Making Machine</option>
+            <option>Semi Automatic Fly-Ash Brick Making Machine</option>
+            <option>Fully Automatic Fly-Ash Brick Making Machine</option>
+
+            <option>Dana Making Machine</option>
+            <option>Pet Flakes Recycling Machine</option>
+            <option>Raffia Recycling Machine</option>
+            <option>HDPE Recycling Machine</option>
+
+            <option>Paper Plate Making Machine</option>
+            <option>Paper Cup Making Machine</option>
+            <option>Bale Press Making Machine</option>
+            <option>Chowmein Noodles Making Machine</option>
+            <option>Slipper Making Machine</option>
+            <option>Crocs Making Machine</option>
+            <option>Melamine Plate Making Machine</option>
+          </select>
+          <label for="machine">Machine / Product Name</label>
+        </div>
+      </div>
+
+      <!-- Capital Dropdown -->
+      <div class="col-md-6">
+        <div class="form-floating select-wrapper">
+          <select class="form-control" id="capital" required>
+            <option value="">Select Self Capital</option>
+            <option>2 Lacs (Only for Paper Plate)</option>
+            <option>10 Lacs</option>
+            <option>15 Lacs</option>
+            <option>20 Lacs</option>
+            <option>30 Lacs</option>
+          </select>
+          <label for="capital">Self Capital</label>
+        </div>
+      </div>
+
+      <!-- City -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="city" placeholder="City" required />
+          <label for="city">City</label>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="col-12">
+        <div class="form-floating">
+          <textarea class="form-control" id="description" style="height:150px" placeholder="Description" required></textarea>
+          <label for="description">Description</label>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="col-12">
+        <button class="btn py-3 px-5" type="submit" style="background:#0e7945;color:#fff;">
+          Send Message
+        </button>
+      </div>
+
     </div>
-    <div class="col-12">
-      <button
-        class="btn py-3 px-5"
-        type="submit"
-        style="background-color: #0e7945; color: #fff"
-      >
-        Send Message
-      </button>
-    </div>
-  </div>
-</form>
+  </form>
+</div>
 
 <script>
-  document.getElementById("whatsappForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // form reload হওয়া বন্ধ করবে
+  // Configuration
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdNdCFUObe6CJ684pwXErYj8mmC9pbmHJ2QEIE0oA90PrCMRg/formResponse";
+  const WHATSAPP_NUMBER = "918980037315"; // Phone number in international format without +
+  
+  // Google Form field mappings
+  const FORM_FIELD_MAP = {
+    name: "entry.1123244238",
+    phone: "entry.646365176",
+    email: "entry.56504900",
+    date: "entry.360596736",
+    machine: "entry.45499057",
+    capital: "entry.886110574",
+    city: "entry.2060973502",
+    description: "entry.531617186"
+  };
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let subject = document.getElementById("subject").value;
-    let message = document.getElementById("message").value;
+  // Track submission state to prevent duplicate submissions
+  let isSubmitting = false;
 
-    let whatsappNumber = "918980037315";
+  document.getElementById("whatsappForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-    let text = `*New Enquiry*\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+    // Prevent duplicate submissions
+    if (isSubmitting) {
+      return;
+    }
+    isSubmitting = true;
 
-    let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    // Get all form values
+    const formData = {
+      name: document.getElementById("name").value.trim(),
+      phone: document.getElementById("phone").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      date: document.getElementById("date").value.trim(),
+      machine: document.getElementById("machine").value.trim(),
+      capital: document.getElementById("capital").value.trim(),
+      city: document.getElementById("city").value.trim(),
+      description: document.getElementById("description").value.trim()
+    };
 
-    window.open(url, "_blank"); // নতুন ট্যাবে WhatsApp খুলবে
+    // Validate form data
+    if (!formData.name || !formData.phone || !formData.email || !formData.machine) {
+      alert("Please fill in all required fields");
+      isSubmitting = false;
+      return;
+    }
+
+    try {
+      // Step 1: Submit to Google Form silently using fetch
+      await submitToGoogleForm(formData);
+
+      // Step 2: Format and open WhatsApp message in new tab
+      const whatsappMessage = formatWhatsAppMessage(formData);
+      window.open(
+        `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`,
+        "_blank"
+      );
+
+      // Step 3: Show success message
+      showSuccessAlert();
+
+      // Step 4: Reset the form
+      document.getElementById("whatsappForm").reset();
+
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("An error occurred while submitting. Please try again.");
+    } finally {
+      // Re-enable form submission
+      isSubmitting = false;
+    }
   });
+
+  /**
+   * Submit form data to Google Form
+   * Uses fetch with 'no-cors' mode to bypass CORS restrictions
+   */
+  async function submitToGoogleForm(formData) {
+    // Build FormData object for Google Form
+    const googleFormData = new FormData();
+    
+    // Map our form fields to Google Form entry IDs
+    googleFormData.append(FORM_FIELD_MAP.name, formData.name);
+    googleFormData.append(FORM_FIELD_MAP.phone, formData.phone);
+    googleFormData.append(FORM_FIELD_MAP.email, formData.email);
+    googleFormData.append(FORM_FIELD_MAP.date, formData.date);
+    googleFormData.append(FORM_FIELD_MAP.machine, formData.machine);
+    googleFormData.append(FORM_FIELD_MAP.capital, formData.capital);
+    googleFormData.append(FORM_FIELD_MAP.city, formData.city);
+    googleFormData.append(FORM_FIELD_MAP.description, formData.description);
+
+    try {
+      // Submit to Google Form
+      await fetch(GOOGLE_FORM_URL, {
+        method: "POST",
+        body: googleFormData,
+        mode: "no-cors" // Bypass CORS restrictions
+      });
+      
+      console.log("✓ Form submitted to Google Sheet successfully");
+    } catch (error) {
+      console.error("Error submitting to Google Form:", error);
+      // Don't throw - Google Form submission errors won't block WhatsApp
+      // The user should still see success message and WhatsApp should open
+    }
+  }
+
+  /**
+   * Format message for WhatsApp
+   * Creates a nicely formatted enquiry message
+   */
+  function formatWhatsAppMessage(formData) {
+    const message = 
+      `*New Machine Enquiry*%0A%0A` +
+      `📝 *Personal Details*%0A` +
+      `Name: ${encodeURIComponent(formData.name)}%0A` +
+      `Phone: ${encodeURIComponent(formData.phone)}%0A` +
+      `Email: ${encodeURIComponent(formData.email)}%0A%0A` +
+      `🏭 *Machine Details*%0A` +
+      `Machine: ${encodeURIComponent(formData.machine)}%0A` +
+      `Capital Available: ${encodeURIComponent(formData.capital)}%0A%0A` +
+      `📍 *Location*%0A` +
+      `City: ${encodeURIComponent(formData.city)}%0A` +
+      `Date: ${encodeURIComponent(formData.date)}%0A%0A` +
+      `📋 *Additional Info*%0A` +
+      `${encodeURIComponent(formData.description)}`;
+
+    return message;
+  }
+
+  /**
+   * Show success alert to user
+   * Displays a confirmation message after successful submission
+   */
+  function showSuccessAlert() {
+    // Create a simple modal/alert
+    const alertDiv = document.createElement("div");
+    alertDiv.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      text-align: center;
+      animation: slideDown 0.3s ease-out;
+    `;
+    
+    alertDiv.innerHTML = `
+      <div style="font-size: 48px; margin-bottom: 15px;">✓</div>
+      <h3 style="color: #0e7945; margin-bottom: 10px;">Success!</h3>
+      <p style="color: #666; margin-bottom: 10px;">Your enquiry has been submitted successfully.</p>
+      <p style="color: #999; font-size: 14px;">WhatsApp will open in a new tab with your details.</p>
+    `;
+    
+    document.body.appendChild(alertDiv);
+
+    // Add animation style
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -60%);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Remove alert after 3 seconds
+    setTimeout(() => {
+      alertDiv.style.animation = "slideDown 0.3s ease-out reverse";
+      setTimeout(() => alertDiv.remove(), 300);
+    }, 3000);
+  }
 </script>
 
-          </div>
         </div>
       </div>
     </div>
@@ -361,10 +612,10 @@
             <p class="mb-2">
               <i class="fa fa-phone-alt me-3"></i>
               <a
-                href="tel:+916290523927"
+                href="tel:+919804334020"
                 class="text-white text-decoration-none"
               >
-                +91 6290523927
+                +91 9804334020
               </a>
             </p>
 
