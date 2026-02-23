@@ -75,6 +75,16 @@ h6,
     height: 32px;
 }
 
+.btn-view-all {
+  background-color: #39b54a !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px;
+}
+.btn-view-all:hover {
+  background-color: #2f9e3f !important;
+}
+
 .btn-lg-square {
     width: 48px;
     height: 48px;
@@ -1176,13 +1186,13 @@ h6,
 }
 
 .product-btn-group .btn-view-all {
-  background-color: #39b54a;
-  color: #fff;
-  border: none;
+  background-color: #39b54a !important;
+  color: #fff !important;
+  border: none !important;
 }
 
 .product-btn-group .btn-view-all:hover {
-  background-color: #1b5a2d;
+  background-color: #1b5a2d  !important;
   transform: translateY(-2px);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   color: #fff;
