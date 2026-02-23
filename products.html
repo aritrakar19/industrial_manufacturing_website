@@ -271,7 +271,7 @@
             </div>
           </div>
           
-          <a href="#testimonial" class="nav-item nav-link">Testimonials</a>
+          <!-- <a href="testimonial.html" class="nav-item nav-link">Testimonials</a> -->
           <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
       </div>
@@ -4819,7 +4819,7 @@
                   <p class="product-description-simple">Automated noodle production lines for manufacturing chowmein noodles with consistent quality and high efficiency.</p>
                   <div class="product-btn-group">
                     <a href="products/other-products/chowmein-noodles-making-machine.html" class="btn btn-sm btn-view-all">View Details</a>
-                    <a href="contact.html" class="btn btn-sm btn-enquire">Enquiry Now1</a>
+                    <a href="contact.html" class="btn btn-sm btn-enquire">Enquiry Now</a>
                   </div>
                 </div>
               </div>
@@ -4836,7 +4836,7 @@
                   <p class="product-description-simple">High-quality slipper making machines for EVA, PVC & PU. Durable, efficient and affordable solutions from Swarnabha Industries.</p>
                   <div class="product-btn-group">
                     <a href="products/other-products/slipper-making-machine.html" class="btn btn-sm btn-view-all">View Details</a>
-                    <a href="contact.html" class="btn btn-sm btn-enquire">Enquiry Now1</a>
+                    <a href="contact.html" class="btn btn-sm btn-enquire">Enquiry Now</a>
                   </div>
                 </div>
               </div>
@@ -4854,7 +4854,7 @@
                   <p class="product-description-simple">Buy high-quality Melamine Plate Making Machine from Swarnabha Industries. Durable, efficient, easy to operate & ideal for tableware production.</p>
                   <div class="product-btn-group">
                     <a href="products/other-products/melamine-plate-making-machine.html" class="btn btn-sm btn-view-all">View Details</a>
-                    <a href="contact.html" class="btn btn-sm btn-enquire">Enquiry Now1</a>
+                    <a href="contact.html" class="btn btn-sm btn-enquire">Enquiry Now</a>
                   </div>
                 </div>
               </div>
@@ -5006,14 +5006,14 @@
             if (!parent) return;
 
             // If an enquiry button already exists in this parent, skip injection
-            if (parent.querySelector('.btn-enquire') || Array.from(parent.querySelectorAll('a,button')).some(n => n.textContent && n.textContent.trim() === 'Enquiry Now1')) {
+            if (parent.querySelector('.btn-enquire') || Array.from(parent.querySelectorAll('a,button')).some(n => n.textContent && n.textContent.trim() === 'Enquiry Now')) {
               return;
             }
 
             // Create enquiry link
             const enquiry = document.createElement('a');
             enquiry.href = 'contact.html';
-            enquiry.textContent = 'Enquiry Now1';
+            enquiry.textContent = 'Enquiry Now';
             enquiry.setAttribute('role', 'button');
 
             // Apply button classes similar to existing ones, but non-blocking
