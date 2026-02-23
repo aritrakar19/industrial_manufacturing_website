@@ -1155,4 +1155,60 @@ h6,
   }
 }
 
+.product-btn-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.product-btn-group .btn {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-btn-group .btn-view-all {
+  background-color: #39b54a;
+  color: #fff;
+  border: none;
+}
+
+.product-btn-group .btn-view-all:hover {
+  background-color: #1b5a2d;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.product-btn-group .btn-enquire {
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+}
+
+.product-btn-group .btn-enquire:hover {
+  background-color: #e07400;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(255, 140, 0, 0.4);
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .product-btn-group {
+    flex-direction: column;
+  }
+  
+  .product-btn-group .btn {
+    width: 100%;
+  }
+}
+
 
