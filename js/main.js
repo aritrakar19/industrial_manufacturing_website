@@ -116,40 +116,67 @@
     });
 
     // Mobile dropdown menu toggle
+    // - If the main item has a submenu, toggle it on mobile
+    // - If the main item has no submenu, allow normal navigation and close menu
     $(document).on('click', '.dropdown-item.main-item', function(e) {
         if ($(window).width() < 992) {
-            e.preventDefault();
-            e.stopPropagation();
             var $group = $(this).closest('.dropdown-item-group');
-            $group.toggleClass('active');
-            $group.siblings('.dropdown-item-group').removeClass('active');
+            var $submenu = $group.find('.sub-dropdown').first();
+            if ($submenu.length) {
+                e.preventDefault();
+                e.stopPropagation();
+                $group.toggleClass('active');
+                $group.siblings('.dropdown-item-group').removeClass('active');
+            } else {
+                // No submenu -> allow navigation but close the mega-menu for a clean transition
+                $('.mega-menu.show').removeClass('show');
+            }
         }
     });
 
-    // Prevent dropdown from closing when clicking inside
-    $(document).on('click', '.mega-menu', function(e) {
+    // Prevent dropdown from closing when interacting inside (click/touch/pointer)
+    // Use multiple event types to improve reliability across devices
+    $(document).on('click touchstart pointerdown', '.mega-menu', function(e) {
         e.stopPropagation();
     });
 
-    // Handle Products dropdown toggle
-    $('.nav-item.dropdown .dropdown-toggle').on('click', function(e) {
+    // Handle Products dropdown toggle - support touch/click and avoid immediate outside handler
+    $('.nav-item.dropdown .dropdown-toggle').on('click touchstart', function(e) {
         if ($(window).width() < 992) {
             e.preventDefault();
+            e.stopPropagation();
             var $dropdown = $(this).closest('.nav-item.dropdown');
             var $menu = $dropdown.find('.mega-menu');
-            
+
             // Close other dropdowns
             $('.nav-item.dropdown').not($dropdown).find('.mega-menu').removeClass('show');
-            
+
             // Toggle current dropdown
             $menu.toggleClass('show');
         }
     });
 
-    // Close dropdown when clicking outside
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.nav-item.dropdown').length) {
+    // Close dropdown when clicking/touching/pointering outside on mobile
+    $(document).on('click touchstart pointerdown', function(e) {
+        if ($(window).width() < 992) {
+            // If the event target is not inside any open dropdown, close open mega-menus
+            if (!$(e.target).closest('.nav-item.dropdown').length) {
+                $('.mega-menu.show').removeClass('show');
+            }
+        }
+    });
+
+    // Ensure menus are closed when resizing to desktop widths
+    $(window).on('resize', function() {
+        if ($(window).width() >= 992) {
             $('.mega-menu').removeClass('show');
+        }
+    });
+
+    // Close mega menu when a link inside it is clicked (mobile) to ensure navigation works cleanly
+    $(document).on('click', '.mega-menu a', function() {
+        if ($(window).width() < 992) {
+            $('.mega-menu.show').removeClass('show');
         }
     });
 

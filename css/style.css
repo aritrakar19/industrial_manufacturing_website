@@ -935,6 +935,25 @@ h6,
   .dropdown-item-group.active .dropdown-item.main-item i.fa-chevron-right {
     transform: rotate(90deg);
   }
+
+  /* Mobile-specific polish: allow wrapping, full-width tappable items and nicer spacing */
+  .dropdown-item.main-item {
+    white-space: normal;
+    padding: 14px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .dropdown-item.sub-item {
+    padding: 12px 18px 12px 34px;
+    font-size: 15px;
+  }
+
+  .mega-menu .col-lg-3,
+  .mega-menu .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 /*** Product Cards ***/
