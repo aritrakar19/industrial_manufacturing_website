@@ -888,6 +888,37 @@ h6,
 }
 
 @media (max-width: 991.98px) {
+  .navbar {
+    padding-right: 0 !important;
+    min-height: 78px;
+  }
+
+  .navbar .navbar-brand {
+    height: 78px;
+    padding-right: 30px;
+    padding-left: 16px !important;
+  }
+
+  .navbar .navbar-brand img {
+    height: 64px !important;
+    max-width: 180px;
+    object-fit: contain;
+  }
+
+  .navbar-toggler {
+    top: 14px !important;
+    right: 12px !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    z-index: 1060;
+  }
+
+  .navbar-collapse {
+    max-height: calc(100vh - 82px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   .mega-menu {
     position: static !important;
     transform: none !important;
@@ -904,6 +935,8 @@ h6,
   
   .mega-menu.show {
     display: block !important;
+    max-height: 70vh;
+    overflow-y: auto;
   }
   
   .dropdown-header {

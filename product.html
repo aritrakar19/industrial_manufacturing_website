@@ -89,18 +89,6 @@
           style="height: 100px"
         />
       </a>
-      <style>
-        /* Ensure the navbar toggler is at top-right on mobile */
-        @media (max-width: 991px) {
-          /* Bootstrap lg breakpoint */
-          .navbar-toggler {
-            position: absolute;
-            top: 15px; /* distance from top */
-            right: 20px; /* distance from right */
-            z-index: 1050; /* above navbar content */
-          }
-        }
-      </style>
       <button
         class="navbar-toggler position-absolute top-0 end-0 mt-3 me-2"
         type="button"
@@ -116,22 +104,38 @@
         <div class="navbar-nav ms-auto p-4 p-lg-0">
           <a href="index.html" class="nav-item nav-link">Home</a>
           <a href="about.html" class="nav-item nav-link">About</a>
-          
+
           <!-- Products Dropdown -->
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Products</a>
+            <a href="javascript:void(0);" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Products</a>
             <div class="dropdown-menu mega-menu">
-              <div class="d-flex pt-3">
-                <a class="btn btn-square rounded-circle me-2" href="https://x.com/swarnabha_ltd" target="_blank" style="background-color: #0e7945; border-color: #0e7945; color: #fff;">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a class="btn btn-square rounded-circle me-2" href="https://www.facebook.com/share/1A4Nxj3sBf/" style="background-color: #0e7945; border-color: #0e7945; color: #fff;">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="btn btn-square rounded-circle me-2" href="https://youtube.com/@swarnabhaindustries2019?si=tT5T-e4jizUeBxU5" target="_blank" style="background-color: #0e7945; border-color: #0e7945; color: #fff;">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </div>
+              <div class="row g-0">
+                <div class="col-lg-12">
+                  <div class="dropdown-header">Our Products</div>
+                  <div class="row g-3 p-3">
+                    <!-- Food And Beverage Industry -->
+                    <div class="col-lg-3 col-md-6">
+                      <div class="dropdown-item-group">
+                        <a href="products.html#food-beverage" class="dropdown-item main-item">
+                          <i class="fa fa-utensils me-2"></i>
+                          Food And Beverage Industry
+                          <i class="fa fa-chevron-down float-end mt-1"></i>
+                        </a>
+                        <div class="sub-dropdown">
+                          <a href="products.html#water-plant" class="dropdown-item sub-item">Water Plant Machine</a>
+                          <a href="products.html#juice-plant" class="dropdown-item sub-item">Fruit Juice and Soda Plant Machine</a>
+                          <a href="products.html#ice-cream" class="dropdown-item sub-item">Ice Cream Plant Machine</a>
+                          <a href="products.html#dairy-plant" class="dropdown-item sub-item">Dairy Plant Machine</a>
+                          <a href="products.html#brewery-plant" class="dropdown-item sub-item">Brewery Plant Machine</a>
+                          <a href="products.html#alcohol-plant" class="dropdown-item sub-item">Alcohol Plant Machine</a>
+                          <a href="products.html#rice-mill" class="dropdown-item sub-item">Rice Mill Machine</a>
+                          <a href="products.html#cold-storage" class="dropdown-item sub-item">Cold Storage Machine</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Injection Molding Machine -->
+                    <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
                         <a href="products.html#injection-molding" class="dropdown-item main-item">
                           <i class="fa fa-cog me-2"></i>Injection Molding Machine
@@ -144,7 +148,7 @@
                         </div>
                       </div>
                     </div>
-                    
+
                     <!-- Blow Molding Machine -->
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
@@ -159,7 +163,7 @@
                         </div>
                       </div>
                     </div>
-                    
+
                     <!-- Fly-Ash Brick Making Machine -->
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
@@ -174,7 +178,7 @@
                         </div>
                       </div>
                     </div>
-                    
+
                     <!-- Plastic Recycling Machine -->
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
@@ -190,7 +194,7 @@
                         </div>
                       </div>
                     </div>
-                    
+
                     <!-- Other Products -->
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
@@ -199,7 +203,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
                         <a href="products.html#paper-cup" class="dropdown-item main-item">
@@ -207,7 +211,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
                         <a href="products.html#bale-press" class="dropdown-item main-item">
@@ -215,7 +219,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
                         <a href="products.html#chowmein" class="dropdown-item main-item">
@@ -223,7 +227,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
                         <a href="products.html#slipper" class="dropdown-item main-item">
@@ -231,7 +235,15 @@
                         </a>
                       </div>
                     </div>
-                    
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="dropdown-item-group">
+                        <a href="products.html#crocs" class="dropdown-item main-item">
+                          <i class="fa fa-shoe-prints me-2"></i>Crocs Making Machine
+                        </a>
+                      </div>
+                    </div>
+
                     <div class="col-lg-3 col-md-6">
                       <div class="dropdown-item-group">
                         <a href="products.html#melamine" class="dropdown-item main-item">
@@ -244,8 +256,7 @@
               </div>
             </div>
           </div>
-          
-          <!-- <a href="testimonial.html" class="nav-item nav-link">Testimonials</a> -->
+
           <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
       </div>
