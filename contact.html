@@ -37,6 +37,31 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      @media (max-width: 767.98px) {
+        .page-header h1 {
+          font-size: 2.25rem;
+        }
+
+        .contact-card {
+          padding: 2rem 1.25rem !important;
+        }
+
+        .contact-map iframe {
+          min-height: 320px !important;
+        }
+
+        .contact-section-title {
+          font-size: 1.8rem;
+          line-height: 1.3;
+        }
+
+        #whatsappForm .btn {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -276,7 +301,7 @@
       <div class="container">
         <div class="row g-5 justify-content-center mb-5">
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="bg-light text-center h-100 p-5">
+            <div class="bg-light text-center h-100 p-5 contact-card">
               <div
                 class="btn-square bg-white rounded-circle mx-auto mb-4"
                 style="width: 90px; height: 90px"
@@ -295,7 +320,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="bg-light text-center h-100 p-5">
+            <div class="bg-light text-center h-100 p-5 contact-card">
               <div
                 class="btn-square bg-white rounded-circle mx-auto mb-4"
                 style="width: 90px; height: 90px"
@@ -314,7 +339,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="bg-light text-center h-100 p-5">
+            <div class="bg-light text-center h-100 p-5 contact-card">
               <div
                 class="btn-square bg-white rounded-circle mx-auto mb-4"
                 style="width: 90px; height: 90px"
@@ -344,7 +369,7 @@
           </div>
         </div>
         <div class="row mb-5">
-          <div class="col-12 wow fadeInUp" data-wow-delay="0.1s" style="position:relative;">
+          <div class="col-12 wow fadeInUp contact-map" data-wow-delay="0.1s" style="position:relative;">
 
   <iframe
     class="w-100"
@@ -377,7 +402,7 @@
         <div class="row g-5">
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <p class="fw-medium text-uppercase  mb-2" style="color: #1B5A2D;">Contact Us</p>
-            <h1 class="display-5 mb-4">
+            <h1 class="display-5 mb-4 contact-section-title">
               Have questions? Chat with us directly on WhatsApp for quick
               support!
             </h1>
