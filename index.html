@@ -37,6 +37,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
 
   <body>
@@ -1066,7 +1072,7 @@
               <i class="fa fa-share text-white"></i>
             </div>
           </div> -->
-          <h5 class="mt-3">Vinod Mishra</h5>
+          <h5 class="mt-3">Binod Mishra</h5>
          <span style="color: #39b54a; font-weight: bold">CO-Founder</span>
 
         </div>
@@ -1100,51 +1106,46 @@
           </p>
           <h1 class="display-5 mb-5">What Our Clients Say!</h1>
         </div>
-        <div
-          class="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.1s"
-        >
-          <div class="testimonial-item text-center">
-            <div class="testimonial-img position-relative">
-              <img
-                class="img-fluid rounded-circle mx-auto mb-5"
-                src="img/test2b79adb16-671b-4704-802f-f33dbf44d746.jpeg"
-              />
-              <div
-                class="btn-square bg-primary rounded-circle"
-                style="background-color: #0e7945 !important"
-              >
-                <i class="fa fa-quote-left text-white"></i>
-              </div>
-            </div>
-            <div class="testimonial-text text-center rounded p-4">
-              <p>
-                Excellent machine and excellent sales support.You can expand it through CHATGPT
-              </p>
-              <h5 class="mb-1">Mafudul Islam</h5>
-              <!-- <span class="fst-italic">Profession</span> -->
+        <div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/m4DT50XR-6Q"
+                title="Client Testimonial 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
-          <div class="testimonial-item text-center">
-            <div class="testimonial-img position-relative">
-              <img
-                class="img-fluid rounded-circle mx-auto mb-5"
-                src="img/test1.jpeg"
-              />
-              <div
-                class="btn-square bg-primary rounded-circle"
-                style="background-color: #0e7945 !important"
-              >
-                <i class="fa fa-quote-left text-white"></i>
-              </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/tKqfn4RPOWQ"
+                title="Client Testimonial 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
-            <div class="testimonial-text text-center rounded p-4">
-              <p>
-                Thank you SWARNABHA INDUSTRIES for making my dream come true. I bought Blowing Machine from them and they make by Business stand. 
-              </p>
-              <h5 class="mb-1">Deb Das</h5>
-              <!-- <span class="fst-italic">Profession</span> -->
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/SCgne4BiZa8"
+                title="Client Testimonial 3"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
+          </div>
+          <div class="text-center mb-4 wow fadeInUp" data-wow-delay="0.1s">
+            <a
+              href="https://www.youtube.com/playlist?list=PLt1eYLPuww5KvOGzBjIoyQ8duYbNujDKz"
+              target="_blank"
+              class="btn py-2 px-4"
+              style="background-color: #39b54a; border-color: #39b54a; color: #fff"
+            >
+              View More 
+            </a>
           </div>
         </div>
       </div>
@@ -1284,6 +1285,65 @@ $('#videoModal').on('hide.bs.modal', function (e) {
     $("#video").attr('src', '');
 })
     </script> -->
+
+    <script>
+      // Smooth scrolling and responsive behavior for Products dropdown
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownLinks = document.querySelectorAll(
+          ".nav-item.dropdown .dropdown-menu .dropdown-item"
+        );
+        const navbar = document.querySelector(".navbar");
+        const navbarCollapse = document.getElementById("navbarCollapse");
+
+        const getCurrentPage = () => {
+          const path = window.location.pathname.split("/").pop();
+          return path === "" ? "index.html" : path;
+        };
+
+        dropdownLinks.forEach((link) => {
+          const href = link.getAttribute("href") || "";
+          if (!href.includes("#")) return;
+
+          link.addEventListener("click", function (e) {
+            const [pathPart, hashPart] = href.split("#");
+            const targetId = hashPart;
+            if (!targetId) return;
+
+            const currentPage = getCurrentPage();
+
+            // If link points to a different page, allow normal navigation
+            if (pathPart && pathPart !== "" && pathPart !== currentPage) {
+              return;
+            }
+
+            e.preventDefault();
+
+            const target = document.getElementById(targetId);
+            if (!target) return;
+
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+            const targetPosition =
+              target.getBoundingClientRect().top + window.pageYOffset;
+            const scrollTo = targetPosition - navbarHeight - 10;
+
+            window.scrollTo({
+              top: scrollTo,
+              behavior: "smooth",
+            });
+
+            // Close mobile navbar collapse if open
+            if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+              const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+              if (bsCollapse) {
+                bsCollapse.hide();
+              } else {
+                navbarCollapse.classList.remove("show");
+              }
+            }
+          });
+        });
+      });
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
   </body>
