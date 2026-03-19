@@ -887,6 +887,21 @@ body {
     opacity: 1 !important;
     visibility: visible !important;
   }
+
+  /* Desktop click-open state */
+  .nav-item.dropdown.desktop-open .mega-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: 100% !important;
+  }
+
+  /* Force-hide state after submenu click */
+  .nav-item.dropdown.force-hide .mega-menu {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
   
   .mega-menu {
     display: block;
