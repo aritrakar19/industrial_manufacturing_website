@@ -90,6 +90,15 @@ h6,
     height: 48px;
 }
 
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.footer {
+  width: 100%;
+}
+
 .btn-square,
 .btn-sm-square,
 .btn-lg-square {
