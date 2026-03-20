@@ -1324,7 +1324,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!href.includes("#")) return;
 
-    link.addEventListener("click", function () {
+    link.addEventListener("click", function (event) {
       const [pathPart, hashPart] = href.split("#");
 
       if (hashPart) {
@@ -1334,25 +1334,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const currentPage = getCurrentPage();
 
-      // If same page → prevent default and scroll
-      if (!pathPart || pathPart === currentPage) {
-        event.preventDefault();
+      // Cross-page link (ex: products.html#...) -> allow browser redirect directly
+      if (pathPart && pathPart !== currentPage) return;
 
-        const target = document.getElementById(hashPart);
-        if (!target) return;
+      // Same page hash -> smooth scroll
+      event.preventDefault();
 
-        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+      const target = document.getElementById(hashPart);
+      if (!target) return;
 
-        const targetPosition =
-          target.getBoundingClientRect().top + window.pageYOffset;
+      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset;
 
-        window.scrollTo({
-          top: targetPosition - navbarHeight - 10,
-          behavior: "smooth",
-        });
-      }
+      window.scrollTo({
+        top: targetPosition - navbarHeight - 10,
+        behavior: "smooth",
+      });
 
-      // Close mobile navbar
+      // Close mobile navbar only for same-page scroll links
       if (navbarCollapse && navbarCollapse.classList.contains("show")) {
         const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
         if (bsCollapse) {
