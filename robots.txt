@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /bottraffic.live
+Disallow: /wp-admin/
+
+sitemap: https://www.xml-sitemaps.com/download/www.swarnabha.com-2d2b47ba5/sitemap.html
